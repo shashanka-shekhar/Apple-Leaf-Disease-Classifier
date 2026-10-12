@@ -49,9 +49,8 @@ Dataset
 
 This project is configured to work with public agricultural benchmark datasets, such as:
 - **[PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)**
-- **[Plant Pathology Challenge (FGVC / Kaggle)](https://www.kaggle.com/c/plant-pathology-2020-fgvc7)**
-- **[PlantDoc]Supplies field-captured images containing complex backgrounds (soil, mulch, other leaves) to improve real-world robustness.(https://www.kaggle.com/datasets/nirmalsankalana/plantdoc-dataset)
-- **Out-of-Distribution (OOD) Robustness Collection: A curated binary dataset consisting of structured folders for leaf (various species) and non-leaf (background scenes and random objects).
+- **[Plant Pathology Challenge (FGVC / Kaggle)](https://www.kaggle.com/datasets/jirkaborovec/plant-pathology-2021-fgvc8-960px)**
+- [PlantDoc]Supplies field-captured images containing complex backgrounds (soil, mulch, other leaves) to improve real-world robustness(https://www.kaggle.com/datasets/nirmalsankalana/plantdoc-dataset)
 
 
 
