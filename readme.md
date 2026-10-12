@@ -6,11 +6,11 @@ An end-to-end Computer Vision project designed to detect and classify foliar dis
 
 Table of Contents
 
-- [Overview](#-overview)
-- [Supported Classes](#-supported-classes)
-- [Dataset](#-dataset)
-- [Model Architecture & Performance](#-model-architecture--performance)
-- [Results & Visualizations](#-results--visualizations)
+- [Overview]
+- [Supported Classes]
+- [Dataset]
+- [Model Architecture & Performance]
+- [Results & Visualizations]
 
 ---
 
