@@ -1,6 +1,6 @@
 Apple Leaf Disease Classifier
 
-An end-to-end Computer Vision project designed to detect and classify foliar diseases in apple trees from leaf imagery. This tool aims to assist farmers, agronomists, and researchers in early diagnosis and targeted intervention, minimizing crop yield loss.
+An edge AI mobile solution featuring an Android app integrated with a lightweight deep learning classifier to diagnose apple leaf diseases in real time directly on-device.
 
 ---
 
@@ -20,7 +20,7 @@ Apple orchards are susceptible to several foliar diseases that drastically reduc
 - Data preprocessing and augmentation pipelines for plant pathology images.
 - Deep learning classification models (e.g., Transfer Learning using MobileNetV2, EfficientNet, or ResNet).
 - Evaluation scripts reporting metrics like Accuracy, Precision, Recall, and F1-score.
-- Inference tools for rapid single-image and batch classification.
+- Inference tools for rapid single-image classification using an android app.
 
 ---
 
@@ -70,6 +70,8 @@ Model Architecture & Performance
 
 - **Backbone Architecture:** Transfer learning with MobileNetV2** (pre-trained on ImageNet).
 - **Optimization:** Adam optimizer with categorical cross-entropy loss and learning rate decay.
+- Base Architecture & Custom Head: Utilizes ImageNet-pretrained MobileNetV2 for lightweight, low-overhead inference, replacing the top layer with Global Average Pooling, 50% Dropout regularization, and a 4-class Softmax dense layer.
+- Two-Phase Transfer Learning: Follows a phased training strategy across 50 epochs using the Adam optimizer (10^-4 learning rate)—initially freezing the backbone for 10 epochs to train the custom head, then unfreezing 100 base layers (epochs 11–50) for deep feature fine-tuning.
   
 - **Evaluation Metrics:**
 
