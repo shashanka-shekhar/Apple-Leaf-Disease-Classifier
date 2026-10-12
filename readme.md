@@ -10,15 +10,7 @@ Table of Contents
 - [Supported Classes](#-supported-classes)
 - [Dataset](#-dataset)
 - [Model Architecture & Performance](#-model-architecture--performance)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Usage](#-usage)
-  - [1. Training](#1-training)
-  - [2. Evaluation & Inference](#2-evaluation--inference)
-  - [3. Interactive Web App (Optional)](#3-interactive-web-app-optional)
 - [Results & Visualizations](#-results--visualizations)
-- [Contributing](#-contributing)
-- [License](#-license)
 
 ---
 
