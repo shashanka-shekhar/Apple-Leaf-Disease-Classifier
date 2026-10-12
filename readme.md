@@ -48,9 +48,9 @@ The classifier typically distinguishes among the following leaf conditions (cust
 Dataset
 
 This project is configured to work with public agricultural benchmark datasets, such as:
-- **[PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)**
+- **[PlantVillage Dataset](https://www.kaggle.com/datasets/tushar5harma/plant-village-dataset-updated)**
 - **[Plant Pathology Challenge (FGVC / Kaggle)](https://www.kaggle.com/datasets/jirkaborovec/plant-pathology-2021-fgvc8-960px)**
-- [PlantDoc](https://www.kaggle.com/datasets/nirmalsankalana/plantdoc-dataset)**
+- [PlantDoc](https://www.kaggle.com/datasets/nirmalsankalana/plantdoc-dataset)
 
 
 
@@ -76,90 +76,14 @@ data/
 
 Model Architecture & Performance
 
-- **Backbone Architecture:** Transfer learning with **ResNet-50 / EfficientNet-B0 / MobileNetV2** (pre-trained on ImageNet).
+- **Backbone Architecture:** Transfer learning with MobileNetV2** (pre-trained on ImageNet).
 - **Optimization:** Adam optimizer with categorical cross-entropy loss and learning rate decay.
+  
 - **Evaluation Metrics:**
 
 | Model | Accuracy | F1-Score | Inference Time (CPU) |
 | :--- | :---: | :---: | :---: |
-| MobileNetV2 | ~96.5% | 0.96 | ~35 ms |
-| ResNet50 | ~98.1% | 0.98 | ~85 ms |
-
-*(Update the table above with your specific model benchmarks.)*
-
----
-
-Project Structure
-
-```text
-apple-disease-classifier/
-├── data/                      # Dataset directory (ignored by git)
-├── models/                    # Saved model checkpoints and weights
-├── notebooks/                 # Exploratory Data Analysis & experiments
-├── src/
-│   ├── __init__.py
-│   ├── dataset.py             # Dataloaders and data augmentations
-│   ├── model.py               # Model definition and transfer learning setup
-│   ├── train.py               # Training loop and validation
-│   └── predict.py             # Single/batch image inference script
-├── app.py                     # Optional Streamlit/Gradio deployment app
-├── requirements.txt           # Python dependencies
-├── .gitignore
-└── README.md
-```
-
----
-
-Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/apple-disease-classifier.git
-   cd apple-disease-classifier
-   ```
-
-2. **Create and activate a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate    # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
----
-
-Usage
-
-### 1. Training
-To train the model from scratch or fine-tune a pre-trained backbone:
-```bash
-python src/train.py --epochs 25 --batch-size 32 --lr 1e-4 --backbone resnet50
-```
-
-### 2. Evaluation & Inference
-Run inference on a single test image:
-```bash
-python src/predict.py --image path/to/leaf_image.jpg --weights models/best_model.pth
-```
-
-**Example output:**
-```json
-{
-  "prediction": "Apple Scab",
-  "confidence": 0.974
-}
-```
-
-### 3. Interactive Web App (Optional)
-If you are using Streamlit or Gradio for a browser demo:
-```bash
-streamlit run app.py
-```
-
+| MobileNetV2 | ~96.5% | 0.96 | ~76.5 ms |
 ---
 
 Results & Visualizations
@@ -167,20 +91,7 @@ Results & Visualizations
 - **Confusion Matrix:** View misclassifications across similar fungal patterns.
 - **Grad-CAM Saliency Maps:** Visual heatmaps highlighting the exact regions of the leaf the neural network attends to when assigning disease labels.
 
-*(Add your plots or screenshots here inside an `assets/` directory, e.g., `![Confusion Matrix](assets/confusion_matrix.png)`)*
 
----
-
-Contributing
-
-Contributions, bug reports, and feature requests are welcome!
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
-3. Commit your Changes (`git commit -m 'Add NewFeature'`)
-4. Push to the Branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
-
----
 
 License
 
