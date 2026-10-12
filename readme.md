@@ -1,10 +1,10 @@
-# 🍏 Apple Leaf Disease Classifier
+Apple Leaf Disease Classifier
 
 An end-to-end Computer Vision project designed to detect and classify foliar diseases in apple trees from leaf imagery. This tool aims to assist farmers, agronomists, and researchers in early diagnosis and targeted intervention, minimizing crop yield loss.
 
 ---
 
-## 📌 Table of Contents
+Table of Contents
 
 - [Overview](#-overview)
 - [Supported Classes](#-supported-classes)
@@ -22,7 +22,7 @@ An end-to-end Computer Vision project designed to detect and classify foliar dis
 
 ---
 
-## 🔍 Overview
+Overview
 
 Apple orchards are susceptible to several foliar diseases that drastically reduce fruit quality and production volume. This repository provides:
 - Data preprocessing and augmentation pipelines for plant pathology images.
@@ -32,7 +32,7 @@ Apple orchards are susceptible to several foliar diseases that drastically reduc
 
 ---
 
-## 🍃 Supported Classes
+Supported Classes
 
 The classifier typically distinguishes among the following leaf conditions (customizable based on your dataset):
 
@@ -45,13 +45,13 @@ The classifier typically distinguishes among the following leaf conditions (cust
 
 ---
 
-## 📊 Dataset
+Dataset
 
 This project is configured to work with public agricultural benchmark datasets, such as:
 - **[PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)**
 - **[Plant Pathology Challenge (FGVC / Kaggle)](https://www.kaggle.com/c/plant-pathology-2020-fgvc7)**
 
-### Directory Setup
+Directory Setup
 Ensure your data follows a standard image classification directory format:
 
 ```text
@@ -71,7 +71,7 @@ data/
 
 ---
 
-## 🧠 Model Architecture & Performance
+Model Architecture & Performance
 
 - **Backbone Architecture:** Transfer learning with **ResNet-50 / EfficientNet-B0 / MobileNetV2** (pre-trained on ImageNet).
 - **Optimization:** Adam optimizer with categorical cross-entropy loss and learning rate decay.
@@ -86,7 +86,7 @@ data/
 
 ---
 
-## 📁 Project Structure
+Project Structure
 
 ```text
 apple-disease-classifier/
@@ -107,7 +107,7 @@ apple-disease-classifier/
 
 ---
 
-## ⚙️ Installation
+Installation
 
 1. **Clone the repository:**
    ```bash
@@ -129,7 +129,7 @@ apple-disease-classifier/
 
 ---
 
-## 🚀 Usage
+Usage
 
 ### 1. Training
 To train the model from scratch or fine-tune a pre-trained backbone:
@@ -159,7 +159,7 @@ streamlit run app.py
 
 ---
 
-## 📈 Results & Visualizations
+Results & Visualizations
 
 - **Confusion Matrix:** View misclassifications across similar fungal patterns.
 - **Grad-CAM Saliency Maps:** Visual heatmaps highlighting the exact regions of the leaf the neural network attends to when assigning disease labels.
@@ -168,7 +168,7 @@ streamlit run app.py
 
 ---
 
-## 🤝 Contributing
+Contributing
 
 Contributions, bug reports, and feature requests are welcome!
 1. Fork the Project
@@ -179,6 +179,6 @@ Contributions, bug reports, and feature requests are welcome!
 
 ---
 
-## 📄 License
+License
 
 Distributed under the MIT License. See `LICENSE` for more information.
