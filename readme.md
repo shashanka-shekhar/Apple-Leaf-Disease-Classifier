@@ -1,4 +1,4 @@
-#Apple Leaf Disease Classifier
+Apple Leaf Disease Classifier
 
 An end-to-end Computer Vision project designed to detect and classify foliar diseases in apple trees from leaf imagery. This tool aims to assist farmers, agronomists, and researchers in early diagnosis and targeted intervention, minimizing crop yield loss.
 
